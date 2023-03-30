@@ -6,11 +6,9 @@ const App = () => {
   
   return (
     <div>
+     
       <Heading textAlign='center' my='4'>Football Team Selling Studio</Heading>
-      <Grid templateColumns='3fr 1fr'>
-        <LoadTeams />
-        <Cart />
-      </Grid>
+      <LoadTeams />
     </div>
   );
 };

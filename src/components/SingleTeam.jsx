@@ -9,7 +9,11 @@ const SingleTeam = (props) => {
             <Text my={5} fontSize='3xl' fontWeight='700' textAlign='center'>{name}</Text>
             <Image borderRadius={15} src={photo}></Image>
             <Text my={5} fontWeight={500}>Price: {price}</Text>
-            <Button onClick={()=>handlePurchase(props.team)} color='white' backgroundColor='blue.500' fontWeight={700}>Buy</Button>
+            <Button onClick={(event) => {
+                event.currentTarget.disabled = true;
+                
+                return handlePurchase(props.team)
+            }} color='white' backgroundColor='blue.500' fontWeight={700}>Buy</Button>
 
        </Card>
     );
